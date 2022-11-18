@@ -1,4 +1,4 @@
-package common.exceptions;
+package com.revature.novels.novelsproject.common.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
 

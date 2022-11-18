@@ -1,4 +1,4 @@
-package novels;
+package com.revature.novels.novelsproject.novels;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

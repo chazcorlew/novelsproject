@@ -1,4 +1,4 @@
-package novels;
+package com.revature.novels.novelsproject.novels;
 
 
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package novels;
+package com.revature.novels.novelsproject.novels;
 
 import com.sun.jdi.request.InvalidRequestStateException;
 import org.springframework.beans.factory.annotation.Autowired;

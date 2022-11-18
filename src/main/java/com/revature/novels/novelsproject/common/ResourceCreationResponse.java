@@ -1,4 +1,4 @@
-package common;
+package com.revature.novels.novelsproject.common;
 
 public class ResourceCreationResponse {
     private String resourceId;

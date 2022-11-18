@@ -1,10 +1,10 @@
-package common;
+package com.revature.novels.novelsproject.common;
 
 import com.fasterxml.jackson.databind.JsonMappingException;
-import common.exceptions.AuthorizationException;
-import common.exceptions.DataSourceException;
-import common.exceptions.InvalidRequestException;
-import common.exceptions.ResourcePersistenceException;
+import com.revature.novels.novelsproject.common.exceptions.ResourcePersistenceException;
+import com.revature.novels.novelsproject.common.exceptions.AuthorizationException;
+import com.revature.novels.novelsproject.common.exceptions.DataSourceException;
+import com.revature.novels.novelsproject.common.exceptions.InvalidRequestException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.tomcat.websocket.AuthenticationException;
