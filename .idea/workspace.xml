@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb1f85f2-94e7-431d-a972-d9d5b207aadd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/novels/NovelRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/novels/NovelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/novels/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/ErrorResponseAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/ResourceCreationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/SecurityUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/AuthenticationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/AuthorizationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/DataSourceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/InvalidRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/exceptions/ResourcePersistenceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/novels/NovelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/NovelsprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/NovelsprojectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/novels/Novels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/novels/Novels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +70,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "874ecf55d1dadef7a02fcd3423cd3698"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -91,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668701353705</updated>
       <workItem from="1668701355100" duration="3573000" />
-      <workItem from="1668704951781" duration="8259000" />
+      <workItem from="1668704951781" duration="8567000" />
+      <workItem from="1668800231281" duration="1738000" />
     </task>
     <servers />
   </component>
