@@ -1,4 +1,8 @@
 package common;
 
-public interface Request {
+public interface Request <T> {
+
+    T extractEntity();
+
+
 }
