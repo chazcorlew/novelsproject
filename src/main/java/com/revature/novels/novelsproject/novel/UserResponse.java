@@ -1,4 +1,4 @@
-package com.revature.novels.novelsproject.novels;
+package com.revature.novels.novelsproject.novel;
 
 
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ public class UserResponse implements Serializable {
 
     private String novel_id;
 
-    private String novelYear;
+    private String novel_year;
 
     private String novel;
 
@@ -22,7 +22,7 @@ public class UserResponse implements Serializable {
 
     public UserResponse(Novels subject) {
         this.novel_id = subject.getNovel_id().toString();
-        this.novelYear = subject.getNovelYear();
+        this.novel_year = subject.getNovel_year();
         this.novel = subject.getNovel();
         this.genre = subject.getGenre();
 
@@ -37,12 +37,12 @@ public class UserResponse implements Serializable {
         this.novel_id = novel_id;
     }
 
-    public String getNovelYear() {
-        return novelYear;
+    public String getNovel_year() {
+        return novel_year;
     }
 
-    public void setNovelYear(String novelYear) {
-        this.novelYear = novelYear;
+    public void setNovel_year(String novel_year) {
+        this.novel_year = novel_year;
     }
 
     public String getNovel() {

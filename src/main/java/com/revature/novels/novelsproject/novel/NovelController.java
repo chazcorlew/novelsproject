@@ -1,4 +1,4 @@
-package com.revature.novels.novelsproject.novels;
+package com.revature.novels.novelsproject.novel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
-@CrossOrigin(origins = "http://localhost:8080/", allowCredentials = "true")
+@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/novels")
 public class NovelController {

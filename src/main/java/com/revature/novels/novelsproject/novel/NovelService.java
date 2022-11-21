@@ -1,12 +1,14 @@
-package com.revature.novels.novelsproject.novels;
+package com.revature.novels.novelsproject.novel;
 
 import com.sun.jdi.request.InvalidRequestStateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class NovelService {
 
     private final NovelRepo novelRepo;

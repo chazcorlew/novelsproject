@@ -1,4 +1,4 @@
-package com.revature.novels.novelsproject.novels;
+package com.revature.novels.novelsproject.novel;
 
 import org.springframework.stereotype.Repository;
 
@@ -19,8 +19,8 @@ public class Novels {
     @Column(name = "novel_id")
     private UUID novel_id;
 
-    @Column(name = "novelYear", nullable = false, unique = true)
-    private String novelYear;
+    @Column(name = "novel_year", nullable = false, unique = true)
+    private String novel_year;
 
     @Column(name = "novel", nullable = false, unique = true)
     private String novel;
@@ -35,9 +35,9 @@ public class Novels {
 
     }
 
-    public Novels(UUID novel_id, String novelYear, String novel, String genre){
+    public Novels(UUID novel_id, String novel_year, String novel, String genre){
         this.novel_id = novel_id;
-        this.novelYear = novelYear;
+        this.novel_year = novel_year;
         this.novel = novel;
         this.genre = genre;
     }
@@ -50,12 +50,12 @@ public class Novels {
         this.novel_id = novel_id;
     }
 
-    public String getNovelYear() {
-        return novelYear;
+    public String getNovel_year() {
+        return novel_year;
     }
 
-    public void setNovelYear(String novelYear) {
-        this.novelYear = novelYear;
+    public void setNovel_year(String novel_year) {
+        this.novel_year = novel_year;
     }
 
     public String getNovel() {
@@ -79,19 +79,19 @@ public class Novels {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Novels novels = (Novels) o;
-        return novel_id.equals(novels.novel_id) && novelYear.equals(novels.novelYear) && novel.equals(novels.novel) && genre.equals(novels.genre);
+        return novel_id.equals(novels.novel_id) && novel_year.equals(novels.novel_year) && novel.equals(novels.novel) && genre.equals(novels.genre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(novel_id, novelYear, novel, genre);
+        return Objects.hash(novel_id, novel_year, novel, genre);
     }
 
     @Override
     public String toString() {
         return "Novels{" +
                 "novel_id=" + novel_id +
-                ", novelYear='" + novelYear + '\'' +
+                ", novel_year='" + novel_year + '\'' +
                 ", novel='" + novel + '\'' +
                 ", genre='" + genre + '\'' +
                 '}';
