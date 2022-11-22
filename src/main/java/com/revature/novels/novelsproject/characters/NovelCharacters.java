@@ -1,12 +1,13 @@
 package com.revature.novels.novelsproject.characters;
 
+import com.revature.novels.novelsproject.novel.Novels;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "novelcharacters")
+@Table(name = "novel_characters")
 @Repository
 public class NovelCharacters {
 
@@ -14,30 +15,32 @@ public class NovelCharacters {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int charId;
 
-    @Column(name = "fullName", unique = true, nullable = false)
+    @Column(unique = true, nullable = false)
     private String fullName;
 
-    @Column(name = "mainProtagonist")
+    @Column
     private boolean mainProtagonist;
 
-    @Column(name = "adaptedForAnime")
+    @Column
     private boolean adaptedForAnime;
 
-    @Column(name = "novelId", unique = true, nullable = false)
-    private int novelId;
 
-    public NovelCharacters(){
+    @ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL, targetEntity = Novels.class)
+    @JoinColumn(name = "novel_id")
+    private Novels novel;
+
+
+    public NovelCharacters() {
         super();
 
     }
 
-    public NovelCharacters(int charId, String fullName, boolean mainProtagonist, boolean adaptedForAnime, int novelId){
+    public NovelCharacters(int charId, String fullName, boolean mainProtagonist, boolean adaptedForAnime, Novels novel) {
         this.charId = charId;
         this.fullName = fullName;
         this.mainProtagonist = mainProtagonist;
         this.adaptedForAnime = adaptedForAnime;
-        this.novelId = novelId;
-
+        this.novel = novel;
     }
 
     public int getCharId() {
@@ -72,12 +75,12 @@ public class NovelCharacters {
         this.adaptedForAnime = adaptedForAnime;
     }
 
-    public int getNovelId() {
-        return novelId;
+    public Novels getNovel() {
+        return novel;
     }
 
-    public void setNovelId(int novelId) {
-        this.novelId = novelId;
+    public void setNovel(Novels novel) {
+        this.novel = novel;
     }
 
     @Override
@@ -85,12 +88,12 @@ public class NovelCharacters {
         if (this == o) return true;
         if (!(o instanceof NovelCharacters)) return false;
         NovelCharacters that = (NovelCharacters) o;
-        return getCharId() == that.getCharId() && isMainProtagonist() == that.isMainProtagonist() && isAdaptedForAnime() == that.isAdaptedForAnime() && getNovelId() == that.getNovelId() && getFullName().equals(that.getFullName());
+        return getCharId() == that.getCharId() && isMainProtagonist() == that.isMainProtagonist() && isAdaptedForAnime() == that.isAdaptedForAnime() && getFullName().equals(that.getFullName()) && getNovel().equals(that.getNovel());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCharId(), getFullName(), isMainProtagonist(), isAdaptedForAnime(), getNovelId());
+        return Objects.hash(getCharId(), getFullName(), isMainProtagonist(), isAdaptedForAnime(), getNovel());
     }
 
     @Override
@@ -100,7 +103,7 @@ public class NovelCharacters {
                 ", fullName='" + fullName + '\'' +
                 ", mainProtagonist=" + mainProtagonist +
                 ", adaptedForAnime=" + adaptedForAnime +
-                ", novelId=" + novelId +
+                ", novel=" + novel +
                 '}';
     }
 }
