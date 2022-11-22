@@ -3,38 +3,37 @@ package com.revature.novels.novelsproject.novel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 @CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/novels")
 public class NovelController {
 
-    private static Logger logger = LogManager.getLogManager().getLogger(String.valueOf(NovelController.class));
 
-    private final NovelService novelService;
+    private final NovelRepo novelRepo;
 
     @Autowired
-    public NovelController(NovelService novelService) {
-        this.novelService = novelService;
+    public NovelController(NovelRepo novelRepo) {
+        this.novelRepo = novelRepo;
     }
 
 
     @GetMapping(produces = "application/json")
-    public List<UserResponse> getAllNovels(HttpServletRequest req) {
-        logger.info("A GET request was received by /novels at {}");
-
-        return novelService.getAllNovels();
+    public List<Novels> getAllNovels() {
+        return novelRepo.findAll();
     }
 
     @GetMapping(value = "/{novel}", produces = "application/json")
-    public UserResponse getNovelByNovel(@PathVariable String novel, HttpSession userSession){
-        logger.info("A GET request was received by /novels at {}");
+    public List<Novels> getNovelByNovel(@PathVariable String novel) {
 
-        return novelService.getNovelByNovel(novel);
+        try {
+            return novelRepo.findNovelsByNovel(novel);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
-
 }

@@ -2,12 +2,8 @@ package com.revature.novels.novelsproject.novel;
 
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
-import java.util.UUID;
 
 @Entity
 @Table(name = "novels")
@@ -16,11 +12,12 @@ import java.util.UUID;
 public class Novels {
 
     @Id
-    @Column(name = "novel_id")
-    private UUID novel_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "novel_year", nullable = false, unique = true)
-    private String novel_year;
+    private int novelId;
+
+    @Column(name = "novelYear", nullable = false, unique = true)
+    private String novelYear;
 
     @Column(name = "novel", nullable = false, unique = true)
     private String novel;
@@ -35,27 +32,27 @@ public class Novels {
 
     }
 
-    public Novels(UUID novel_id, String novel_year, String novel, String genre){
-        this.novel_id = novel_id;
-        this.novel_year = novel_year;
+    public Novels(int novelId, String novelYear, String novel, String genre){
+        this.novelId = novelId;
+        this.novelYear = novelYear;
         this.novel = novel;
         this.genre = genre;
     }
 
-    public UUID getNovel_id() {
-        return novel_id;
+    public int getNovelId() {
+        return novelId;
     }
 
-    public void setNovel_id(UUID novel_id) {
-        this.novel_id = novel_id;
+    public void setNovelId(int novelId) {
+        this.novelId = novelId;
     }
 
-    public String getNovel_year() {
-        return novel_year;
+    public String getNovelYear() {
+        return novelYear;
     }
 
-    public void setNovel_year(String novel_year) {
-        this.novel_year = novel_year;
+    public void setNovelYear(String novelYear) {
+        this.novelYear = novelYear;
     }
 
     public String getNovel() {
@@ -79,21 +76,22 @@ public class Novels {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Novels novels = (Novels) o;
-        return novel_id.equals(novels.novel_id) && novel_year.equals(novels.novel_year) && novel.equals(novels.novel) && genre.equals(novels.genre);
+        return novelId == novels.novelId && novelYear.equals(novels.novelYear) && novel.equals(novels.novel) && genre.equals(novels.genre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(novel_id, novel_year, novel, genre);
+        return Objects.hash(novelId, novelYear, novel, genre);
     }
 
     @Override
     public String toString() {
         return "Novels{" +
-                "novel_id=" + novel_id +
-                ", novel_year='" + novel_year + '\'' +
+                "novelId=" + novelId +
+                ", novelYear='" + novelYear + '\'' +
                 ", novel='" + novel + '\'' +
                 ", genre='" + genre + '\'' +
                 '}';
     }
 }
+
