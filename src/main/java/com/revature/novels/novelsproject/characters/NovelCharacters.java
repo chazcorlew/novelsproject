@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "novel_characters")
+@Table(name = "novelcharacters")
 @Repository
 public class NovelCharacters {
 

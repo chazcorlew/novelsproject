@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb1f85f2-94e7-431d-a972-d9d5b207aadd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/NovelCharacters.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/ErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/ErrorResponseAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/Request.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/ResourceCreationResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/exceptions/AuthorizationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/exceptions/DataSourceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/exceptions/InvalidRequestException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/exceptions/ResourceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/common/exceptions/ResourcePersistenceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/UserResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel_characters/NovelCharacters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +105,8 @@
       <workItem from="1668701355100" duration="3573000" />
       <workItem from="1668704951781" duration="8567000" />
       <workItem from="1668800231281" duration="1738000" />
-      <workItem from="1669044449777" duration="19442000" />
+      <workItem from="1669044449777" duration="19843000" />
+      <workItem from="1669134119433" duration="1539000" />
     </task>
     <servers />
   </component>
