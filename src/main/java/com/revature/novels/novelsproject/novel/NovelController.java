@@ -36,4 +36,13 @@ public class NovelController {
         }
 
     }
+        @PostMapping(path = "/addNovel", consumes = "application/json")
+    public Novels createNovel(@RequestBody Novels novels){
+     Novels dest = novelRepo.save(novels);
+     return dest;
+
+
+
+
+    }
 }
