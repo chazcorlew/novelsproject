@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb1f85f2-94e7-431d-a972-d9d5b207aadd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +108,7 @@
       <workItem from="1669044449777" duration="19843000" />
       <workItem from="1669134119433" duration="3632000" />
       <workItem from="1669151006719" duration="3931000" />
-      <workItem from="1669222327458" duration="3452000" />
+      <workItem from="1669222327458" duration="5271000" />
     </task>
     <servers />
   </component>

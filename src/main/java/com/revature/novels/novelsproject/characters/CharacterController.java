@@ -4,10 +4,7 @@ package com.revature.novels.novelsproject.characters;
 import com.revature.novels.novelsproject.novel.NovelRepo;
 import com.revature.novels.novelsproject.novel.Novels;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,6 +31,11 @@ public class CharacterController {
 
         Novels novel = novelRepo.findById(novelId).orElseThrow(RuntimeException::new);
         return characterRepo.findNovelCharactersByNovel(novel);
+    }
+    @PostMapping(path = "/addCharacter", consumes = "application/json")
+    public NovelCharacters createNovelCharacter (@RequestBody NovelCharacters characters){
+        NovelCharacters dest = characterRepo.save(characters);
+        return dest;
     }
 }
 
