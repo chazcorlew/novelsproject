@@ -1,6 +1,8 @@
 package com.revature.novels.novelsproject.novel;
 
+import com.revature.novels.novelsproject.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,8 +43,20 @@ public class NovelController {
      Novels dest = novelRepo.save(novels);
      return dest;
 
-
-
-
     }
+
+        @PutMapping("{novelId}")
+    public ResponseEntity<Novels> updateNovel(@PathVariable("novelId") int novelId, @RequestBody Novels novels){
+        Novels updateNovel = novelRepo.findNovelByNovelId(novelId)
+                .orElseThrow(() -> new ResourceNotFoundException("Novel does not exist with ID: " + novelId));
+
+        updateNovel.setNovelYear(novels.getNovelYear());
+        updateNovel.setNovel(novels.getNovel());
+        updateNovel.setGenre(novels.getGenre());
+
+        novelRepo.save(updateNovel);
+
+        return ResponseEntity.ok(updateNovel);
+
+        }
 }
