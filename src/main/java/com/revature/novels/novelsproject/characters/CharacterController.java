@@ -4,6 +4,8 @@ package com.revature.novels.novelsproject.characters;
 import com.revature.novels.novelsproject.exceptions.ResourceNotFoundException;
 import com.revature.novels.novelsproject.novel.NovelRepo;
 import com.revature.novels.novelsproject.novel.Novels;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -55,10 +57,9 @@ public class CharacterController {
 
 
 
-    @PostMapping(consumes = "application/json", produces = "application/json")
-    public ResponseEntity registerNewCharacter (@RequestBody NovelCharacters characters){
-
-        return ResponseEntity.ok(characters);
+    @PostMapping("/addCharacters")
+    NovelCharacters newCharacter(@RequestBody NovelCharacters newCharacter){
+        return characterRepo.save(newCharacter);
     }
 
     @PutMapping("{charId}")
@@ -74,11 +75,11 @@ public class CharacterController {
    return ResponseEntity.ok(updateCharacter);
 
     }
-    @DeleteMapping(path = "/{charId}")
-    public ResponseEntity<Void> deleteCharacter(@PathVariable String charId) {
 
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @DeleteMapping(path = "/deleteCharacters/{charId}")
+    public void deleteCharacter(@PathVariable ("charId") int charId){
         characterRepo.deleteById(charId);
-        return ResponseEntity.noContent().build();
 
     }
 }

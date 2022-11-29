@@ -22,7 +22,7 @@ public class Novels {
     @Column(name = "novel", nullable = false, unique = true)
     private String novel;
 
-    @Column(name = "genre", nullable = false, unique = true)
+    @Column(name = "genre", nullable = false)
     private String genre;
 
 

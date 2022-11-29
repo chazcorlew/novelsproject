@@ -1,6 +1,8 @@
 package com.revature.novels.novelsproject.novel;
 
 import com.revature.novels.novelsproject.exceptions.ResourceNotFoundException;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -61,11 +63,10 @@ public class NovelController {
         return ResponseEntity.ok(updateNovel);
 
         }
-        @DeleteMapping(path = "/{novelId}")
-    public ResponseEntity<Void> deleteNovel(@PathVariable String novelId) {
-
-    novelRepo.deleteById(Integer.valueOf(novelId));
-    return ResponseEntity.noContent().build();
+        @OnDelete(action = OnDeleteAction.CASCADE)
+        @DeleteMapping(path = "/deleteNovel/{novelId}")
+    public void deleteNovel(@PathVariable ("novelId") int novelId){
+        novelRepo.deleteById(novelId);
 
     }
 }
