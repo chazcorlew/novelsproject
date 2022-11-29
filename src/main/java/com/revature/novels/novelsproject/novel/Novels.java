@@ -94,7 +94,6 @@ public class Novels {
                 '}';
     }
 
-    public void add(Novels novels) {
-    }
+
 }
 

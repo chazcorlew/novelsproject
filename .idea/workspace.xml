@@ -10,7 +10,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/NovCharService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/NovCharService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

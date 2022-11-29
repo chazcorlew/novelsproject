@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/novelcharacters")
@@ -32,22 +31,21 @@ public class CharacterController {
         return characterRepo.findAll();
     }
 
-    @GetMapping(value = "/{fullName}",produces = "application/json")
-    public Optional<NovelCharacters> getCharactersByFullName(@PathVariable String fullName) {
+    @GetMapping(value = "/names/{fullName}",produces = "application/json")
+    public List<NovelCharacters> getCharactersByFullName(@PathVariable String fullName) {
 
         try{
             return characterRepo.findNovelCharactersByFullName(fullName);
 
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
 
-
     }
 
-    @GetMapping(value = "/{novelId}", produces = "application/json")
+    @GetMapping(value = "/characters/{novelId}", produces = "application/json")
     public List<NovelCharacters> getNovelCharactersByNovelId(@PathVariable int novelId) {
 
         Novels novel = novelRepo.findById(novelId).orElseThrow(RuntimeException::new);
@@ -57,14 +55,14 @@ public class CharacterController {
 
 
 
-    @PostMapping(path = "/addCharacter", consumes = "application/json")
-    public NovelCharacters createNovelCharacter (@RequestBody NovelCharacters characters){
-        NovelCharacters dest = characterRepo.save(characters);
-        return dest;
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    public ResponseEntity registerNewCharacter (@RequestBody NovelCharacters characters){
+
+        return ResponseEntity.ok(characters);
     }
 
     @PutMapping("{charId}")
-    public ResponseEntity<NovelCharacters> updateCharacter(@PathVariable("charId") String charId, @RequestBody NovelCharacters characters){
+    public ResponseEntity<NovelCharacters> updateCharacter(@PathVariable("charId") int charId, @RequestBody NovelCharacters characters){
         NovelCharacters updateCharacter = characterRepo.findNovelCharactersByCharId(charId).orElseThrow(() -> new ResourceNotFoundException("Character does not exist with ID: " + charId));
 
    updateCharacter.setFullName(characters.getFullName());

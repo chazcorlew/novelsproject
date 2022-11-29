@@ -14,9 +14,12 @@ public class NovelController {
 
     private final NovelRepo novelRepo;
 
+    private final NovelService novelService;
+
     @Autowired
-    public NovelController(NovelRepo novelRepo) {
+    public NovelController(NovelRepo novelRepo, NovelService novelService) {
         this.novelRepo = novelRepo;
+        this.novelService = novelService;
     }
 
 
@@ -38,10 +41,9 @@ public class NovelController {
         }
 
     }
-        @PostMapping(path = "/addNovel", consumes = "application/json")
-    public Novels createNovel(@RequestBody Novels novels){
-     Novels dest = novelRepo.save(novels);
-     return dest;
+    @PostMapping("/addNovels")
+    Novels newNovel(@RequestBody Novels newNovel){
+        return novelRepo.save(newNovel);
 
     }
 

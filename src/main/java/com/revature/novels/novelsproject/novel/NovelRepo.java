@@ -18,4 +18,7 @@ public interface NovelRepo extends JpaRepository<Novels, Integer> {
     Optional<Novels> findNovelsByGenre(String genre);
 
 
+
+
+
 }

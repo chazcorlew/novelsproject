@@ -12,9 +12,9 @@ public interface CharacterRepo extends JpaRepository <NovelCharacters, String>{
 
     List<NovelCharacters> findNovelCharactersByNovel (Novels novels);
 
-    Optional<NovelCharacters> findNovelCharactersByFullName (String fullName);
+    List<NovelCharacters> findNovelCharactersByFullName (String fullName);
 
-    Optional <NovelCharacters> findNovelCharactersByCharId (String charId);
+    Optional <NovelCharacters> findNovelCharactersByCharId (int charId);
 
 
 }
