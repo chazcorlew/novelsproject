@@ -15,7 +15,7 @@ public class NovCharService {
         this.characterRepo = characterRepo;
     }
 
-    public NovelCharacters updateNovelCharacters(NovelCharacters novelCharacters, int charId){
+    public NovelCharacters updateNovelCharacters(NovelCharacters novelCharacters, String charId){
         NovelCharacters existingNovelCharacter = characterRepo.findNovelCharactersByCharId(charId).orElseThrow(ResourceNotFoundException::new);
 
         existingNovelCharacter.setFullName(novelCharacters.getFullName());

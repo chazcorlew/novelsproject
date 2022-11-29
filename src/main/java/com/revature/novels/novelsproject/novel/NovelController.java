@@ -59,4 +59,11 @@ public class NovelController {
         return ResponseEntity.ok(updateNovel);
 
         }
+        @DeleteMapping(path = "/{novelId}")
+    public ResponseEntity<Void> deleteNovel(@PathVariable String novelId) {
+
+    novelRepo.deleteById(Integer.valueOf(novelId));
+    return ResponseEntity.noContent().build();
+
+    }
 }

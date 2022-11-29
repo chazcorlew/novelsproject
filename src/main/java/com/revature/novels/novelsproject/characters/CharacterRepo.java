@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface CharacterRepo extends JpaRepository <NovelCharacters, Integer>{
+public interface CharacterRepo extends JpaRepository <NovelCharacters, String>{
 
     List<NovelCharacters> findNovelCharactersByNovel (Novels novels);
 
-    Optional<NovelCharacters> findNovelCharactersByCharId (int charId);
+    Optional<NovelCharacters> findNovelCharactersByFullName (String fullName);
+
+    Optional <NovelCharacters> findNovelCharactersByCharId (String charId);
 
 
 }
