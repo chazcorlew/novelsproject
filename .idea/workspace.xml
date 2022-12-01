@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bb1f85f2-94e7-431d-a972-d9d5b207aadd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/NovelsprojectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/NovelsprojectApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/characters/CharacterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/NovelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/novels/novelsproject/novel/Novels.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,7 @@
       <workItem from="1669332413031" duration="2484000" />
       <workItem from="1669654341101" duration="20856000" />
       <workItem from="1669831458980" duration="2687000" />
-      <workItem from="1669911409585" duration="3782000" />
+      <workItem from="1669911409585" duration="5791000" />
     </task>
     <servers />
   </component>
