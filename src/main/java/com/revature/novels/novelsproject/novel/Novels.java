@@ -16,7 +16,7 @@ public class Novels {
 
     private int novelId;
 
-    @Column(name = "novelYear", nullable = false, unique = true)
+    @Column(name = "novelYear", nullable = false)
     private String novelYear;
 
     @Column(name = "novel", nullable = false, unique = true)
