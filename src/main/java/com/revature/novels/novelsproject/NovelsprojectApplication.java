@@ -8,8 +8,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 @SpringBootApplication
@@ -35,27 +33,6 @@ public class NovelsprojectApplication {
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 
 
-	}
-
-	public static String doHashing(String password) {
-		try{
-			MessageDigest messageDigest = MessageDigest.getInstance("SHA");
-
-			messageDigest.update(password.getBytes());
-
-			byte[] resultByArray = messageDigest.digest();
-
-			StringBuilder sb = new StringBuilder();
-
-			for (byte b : resultByArray) {
-				sb.append(String.format("%02x", b));
-			}
-			return sb.toString();
-
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		}
-		return "";
 
 	}
 
